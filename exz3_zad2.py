@@ -7,3 +7,14 @@ def palindrom(word):
     return True
 print(palindrom("шалаш"))
 print(palindrom(input("word for palindrom: ?")))
+
+def palindrom(word):
+    word=word.lower()
+    if len(word)<= 1:
+        return True
+    if word[0] != word[-1]:
+        return False
+    else:
+        return palindrom(word[1:-1])
+print(palindrom(input("word for palindrom: ?")))
+#                 # word for palindrom: ?  ASDdsa
